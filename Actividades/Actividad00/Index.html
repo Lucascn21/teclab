@@ -1,0 +1,28 @@
+<script>
+let montoInicial= Math.round(Math.random() * 130) + 1400; // Numero entre 1400 y 1530
+let interes, montoTotal, montoCuota;
+//Segun monto inicial, determino un interes, 1500 o menos le corresponde 15%, al resto 10%
+montoInicial<=1500 ?interes=0.15:interes=0.10
+
+console.log(`${montoInicial} le corresponde ${interes*100}% de interes`);
+
+//Calculo el importa neto de interes, uso variable para que sea mas legible el codigo
+valorInteres=montoInicial*interes;
+
+//Sumo el interes al monto inicial y lo guardo como total
+montoTotal=montoInicial+valorInteres 
+
+//calculo el importe individual de cada cuota
+montoCuota=montoTotal/12;  
+
+/*
+console.log(montoInicial, valorInteres, montoTotal,
+montoCuota*12);
+*/
+
+//Uso el metodo toFixed para no llenar de decimales al usuario
+console.log(`el total a pagar es ${montoTotal} y el valor de su cuota es ${montoCuota.toFixed(2)}`);
+
+document.write(`${montoInicial} le corresponde ${interes*100}% de interes <br>`);
+document.write(`el total a pagar es ${montoTotal} y el valor de su cuota es ${montoCuota.toFixed(2)}`);
+</script>
